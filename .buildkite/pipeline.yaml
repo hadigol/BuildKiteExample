@@ -4,7 +4,6 @@ steps:
     plugins:
       - docker#v5.12.0:
           image: "golang:1.18.0"
-  - command: "rm -rf /home/hadi/.buildkite-agent/builds/buildkite2-1/testorg-41/*"
   - block: "Name"
     prompt: "Enter your Name"
     fields:
