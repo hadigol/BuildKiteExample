@@ -9,3 +9,5 @@ steps:
     fields:
       - text: "First Name"
         key: "first-name"
+  - command: "buildkite-agent artifact download test/hello ."
+
