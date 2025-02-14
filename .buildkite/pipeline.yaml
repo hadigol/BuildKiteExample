@@ -1,5 +1,5 @@
 steps:
-  - command: "go build -o dist/hello ./hello"
+  - command: "go build -o ./hello"
     artifact_paths: "./dist/hello"
     plugins:
       - docker#v5.12.0:
