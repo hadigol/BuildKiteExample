@@ -3,7 +3,7 @@ steps:
     plugins:
       - docker#v5.12.0:
           image: "golang:1.18.0"
-          username: "buildkite-agent"
+          propagate-uid-gid: true
     commands: 
         - "go build -o dist/hello ./hello"
     artifact_paths: "./dist/hello"
