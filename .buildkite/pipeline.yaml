@@ -4,9 +4,8 @@ steps:
     plugins:
       - docker#v5.12.0:
           image: "golang:1.18.0"
-  - block: "Enter Your Name"
-  prompt: "Please Enter you First Name"
-  fields:
-    - text: "Your Name"
-    - key: "your-name"
+  - input: "Enter your First Name"
+    fields:
+      - text: "What is your First Name?"
+        key: "first-name"
     
