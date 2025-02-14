@@ -10,4 +10,6 @@ steps:
       - text: "First Name"
         key: "first-name"
   - command: "buildkite-agent artifact download test/hello ."
-
+    label: "Download the Artifact"
+  - command: ".buildkite/run-go.sh"
+    label: "Run the Go Application"
