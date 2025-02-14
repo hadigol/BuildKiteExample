@@ -4,3 +4,7 @@ steps:
     plugins:
       - docker#v5.12.0:
           image: "golang:1.18.0"
+  - input: "Enter First Name:"
+    fields:
+      - text: "What is your First Name?"
+        key: "first-name"
