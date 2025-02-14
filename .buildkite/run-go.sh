@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FIRST_NAME="$(buildkite-agent meta-data get "first-name")"
-~/binary/hello-app "$FITST_NAME"
+YOUR_NAME="$(buildkite-agent meta-data get "your-name")"
+~/binary/hello-app "$YOUR_NAME"
 
 
