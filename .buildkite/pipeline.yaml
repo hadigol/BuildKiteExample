@@ -10,8 +10,8 @@ steps:
   - block: "Name"
     prompt: "Enter your Name"
     fields:
-      - text: "First Name"
-        key: "first-name"
+      - text: "Enter Your Name"
+        key: "your-name"
   - commands: 
         - "buildkite-agent artifact download hello-app ~/binary/"
         - "chmod +x ~/binary/hello-app"
