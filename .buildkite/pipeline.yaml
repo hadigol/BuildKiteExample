@@ -5,14 +5,14 @@ steps:
           image: "golang:1.18.0"
           chown: true
     commands: 
-        - "go build -o dist/hello ./hello"
-    artifact_paths: "./dist/hello"
+        - "go build -o dist/hello-app ./hello"
+    artifact_paths: "./dist/hello-app"
   - block: "Name"
     prompt: "Enter your Name"
     fields:
       - text: "First Name"
         key: "first-name"
-  - command: "buildkite-agent artifact download dist/hello hello"
+  - command: "buildkite-agent artifact download dist/hello-app ."
     label: "Download the Artifact"
   - command: ".buildkite/run-go.sh"
     label: "Run the Go Application"
