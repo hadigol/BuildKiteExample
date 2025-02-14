@@ -4,7 +4,9 @@ steps:
       - docker#v5.12.0:
           image: "golang:1.18.0"
           user: "${BUILDKITE_AGENT_UID}:${BUILDKITE_AGENT_GID}"
-    command: "go build -o dist/hello ./hello"
+    commands: 
+        - "go build -o dist/hello ./hello"
+        - "chmod -R 777 dist/hello"
     artifact_paths: "./dist/hello"
   - block: "Name"
     prompt: "Enter your Name"
