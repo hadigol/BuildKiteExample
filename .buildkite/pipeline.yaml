@@ -12,7 +12,9 @@ steps:
     fields:
       - text: "First Name"
         key: "first-name"
-  - command: "buildkite-agent artifact download hello-app ~/binary/"
+  - commands: 
+        - "buildkite-agent artifact download hello-app ~/binary/"
+        - "chmod +x ~/binary/hello-app"
     label: "Download the Artifact"
   - command: ".buildkite/run-go.sh"
     label: "Run the Go Application"
