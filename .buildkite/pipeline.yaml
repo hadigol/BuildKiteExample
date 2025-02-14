@@ -5,8 +5,8 @@ steps:
           image: "golang:1.18.0"
           chown: true
     commands: 
-        - "go build -o dist/hello-app ./hello"
-    artifact_paths: "./dist/hello-app"
+        - "go build -o hello-app ./hello"
+    artifact_paths: "hello-app"
   - block: "Name"
     prompt: "Enter your Name"
     fields:
